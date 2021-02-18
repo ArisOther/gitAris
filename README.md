@@ -8,7 +8,7 @@
 - github.com
 - create new repository/organisation
 
-# CONNECT GIT
+## CONNECT GIT
 - git --version 
 - git config --global user.name "namamu" 
 - git config --global user.email "winandiaris@gmail.com"
@@ -17,7 +17,7 @@
 - git remote add origin https://github.com/winandiOrg/winandiPy2.git
 - git remote set-url origin git@github.com:winandiaris/winandiPy.git
 
-# GIT INIT
+## GIT INIT
 - Memulai git di directory local:
   - Masuk ke directory baru/kosong, buat file sembarang
   - git init
@@ -29,24 +29,24 @@
   - git remote add origin https://github.com/ArisDjango/CrudVeryAcReact.git
   - git status
 
-# CLONE
+## CLONE
 - cd directory_lokal
 - git clone https://github.com/ArisDjango/CrudVeryAcReact.git
 
-# LOG
+## LOG
 - git log   = melihat perubahan/kontribusi dalam git 
 - git log <branch>
 - git log --oneline    = satu baris simple
 - git log 423ub34    = menampilkan log berdasarkan no.
 
 
-# COMMIT
+## COMMIT
 - git add --all
 - git status = melihat daftar file yang siap di commit
 - git commit -m "ini adalah file html" 
 
 
-# PUSH
+## PUSH
 - saat melakukan push, branch yang aktif = 'main'.
 - biasanya diminta branch agar bisa push
 - perintah dibawah ini akan otomatis membuat branch baru = 'master'
@@ -54,13 +54,13 @@
 - di github, perubahan masuk di branch master, dan bisa dirubah manjadi branch default.
 - jika menginginkan perubahan terdapat juga di branch lain, gunakan merge
 
-# BRANCH
+## BRANCH
 - git branch = list branch
 - git branch nama_branch = membuat branch baru
 - git checkout master = pindah ke branch teretentu (master)
 - git branch -d crazy-experiment = delete branch
 
-# MERGE
+## MERGE
 - Misal branch 'hal-depan' (kondisi sudah terisi content code) ada file baru/perubahan, dan ingin menambahkan file/perubahan itu ke branch 'master'
   - git checkout master
   - git merge hal_depan
@@ -72,11 +72,11 @@
   - buat perubahan pada kode
   - git add/commit/push
 
-# REMOTE
+## REMOTE
 - jika ingin pindah remote dari satu repo ke repo yang lain,:
   - git remote set-url origin git@github.com:winandiaris/winandiPy.git
 
-# PULL
+## PULL
 - misal menginginkan code di vs code up to date terhadap github web
   - git checkout master
   - git pull
@@ -92,7 +92,7 @@
 
 
 
-# other
+## other
 Commit
 =========================
 Setelah melakukan perubahan pada kode di dir lokal
@@ -103,7 +103,7 @@ Setelah melakukan perubahan pada kode di dir lokal
 
 
 
-# Undo dan Pindah Log
+## Undo dan Pindah Log
 - ========================
 - git log ----------> history proses git, 
 - git log --oneline -----------------------> show log on 1 line.
@@ -114,7 +114,7 @@ Setelah melakukan perubahan pada kode di dir lokal
 
 
 
-# Reset
+## Reset
 - =========================
 - git reset --mixed 12345 ---------> me-reset log git tanpa menghilangkan / merubah file asli. log git yang akan hilang adalah log diatasnya. misal, jika kita memilih id 12345 maka yang hilang adalah log diatas id tersebut. sedangkan data di workspace masih tetap ada
  - git reset --hard 12345 ---------> untuk me reset log git sekaligus mengembalikan workspace kita pada kondisi awal
@@ -122,7 +122,7 @@ Setelah melakukan perubahan pada kode di dir lokal
 
 
 
-# Branch
+## Branch
 - =======================
 - Branch dilakukan ketika bermaksud kontribusi pada master
 - branch akan membuat cabang/menduplikasi folder persis seperti ‘master’.
@@ -143,13 +143,13 @@ Setelah melakukan perubahan pada kode di dir lokal
 
 
 
-# Repository
+## Repository
 - ==============================
 - bisa dibuat di github.com
 
 
 
-# Clone
+## Clone
 - ======================================
 - Clone dilakukan ketika tidak bermaksud melakukan kontribusi pada 'master'
 - Buka konsol, lalu masuk ke direktori lokal yang ingin dijadikan tempat kloning ( contoh cd c:\\xampp\htdocs\latihan )
@@ -180,7 +180,7 @@ Git push origin master
 
 
 
-=======================
+- =======================
 ```
 Contoh:
 echo "# monsba" >> README.md
