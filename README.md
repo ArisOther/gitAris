@@ -63,7 +63,8 @@
 - pastikan config, tambahhkan username/pass jika belum ada
 - pastikan remote punya izin, add/rm remote jika perlu
 
-- git push origin / sudo git push origin
+- git push origin 
+- sudo git push origin --> untuk by pass agar tidak menggunakan sudo --> sudo chown -R aris:aris /home/aris/tesRepo/Spoon-Knife/.git
   - saat melakukan push, branch yang aktif = 'main'.
   - biasanya diminta branch agar bisa push--> perintah dibawah ini akan otomatis membuat branch baru = 'master'
     - git push --set-upstream origin master
