@@ -8,14 +8,18 @@
 - github.com
 - create new repository/organisation
 
-## CONNECT GIT
-- git --version 
+## GIT CONFIG
+- git --version
+- git config --list
 - git config --global user.name "namamu" 
 - git config --global user.email "winandiaris@gmail.com"
 - git config --global user.password "your password"
-- git remote rm origin
+
+## REMOTE
+- git remote -v --> remote list
 - git remote add origin https://github.com/winandiOrg/winandiPy2.git
 - git remote set-url origin git@github.com:winandiaris/winandiPy.git
+- git remote rm origin --> menghapus remote ang lama dulu jika diperlukan
 
 ## GIT INIT
 - Memulai git di directory local:
@@ -30,8 +34,17 @@
   - git status
 
 ## CLONE
+- buat repo kosong baru di git --> https://github.com/ArisDjango/CrudVeryAcReact.git
 - cd directory_lokal
 - git clone https://github.com/ArisDjango/CrudVeryAcReact.git
+- Buat perubahan
+- git add . --> git commit -m "sds" --> git push origin
+
+## FORK
+- Fork repo yang diinginkan --> https://github.com/octocat/Spoon-Knife
+- tentukan fork ini di simpan di mana --> pilih dari repo kita/buat repo baru dulu jika tak punya
+- hasilnya --> https://github.com/ArisOther/Spoon-Knife
+- clone ke dir local kita
 
 ## LOG
 - git log   = melihat perubahan/kontribusi dalam git 
@@ -47,11 +60,14 @@
 
 
 ## PUSH
-- saat melakukan push, branch yang aktif = 'main'.
-- biasanya diminta branch agar bisa push
-- perintah dibawah ini akan otomatis membuat branch baru = 'master'
-   - git push --set-upstream origin master
-- di github, perubahan masuk di branch master, dan bisa dirubah manjadi branch default.
+- pastikan config, tambahhkan username/pass jika belum ada
+- pastikan remote punya izin, add/rm remote jika perlu
+
+- git push origin / sudo git push origin
+  - saat melakukan push, branch yang aktif = 'main'.
+  - biasanya diminta branch agar bisa push--> perintah dibawah ini akan otomatis membuat branch baru = 'master'
+    - git push --set-upstream origin master
+  - di github, perubahan masuk di branch master, dan bisa dirubah manjadi branch default.
 - jika menginginkan perubahan terdapat juga di branch lain, gunakan merge
 
 ## BRANCH
@@ -72,9 +88,7 @@
   - buat perubahan pada kode
   - git add/commit/push
 
-## REMOTE
-- jika ingin pindah remote dari satu repo ke repo yang lain,:
-  - git remote set-url origin git@github.com:winandiaris/winandiPy.git
+
 
 ## PULL
 - misal menginginkan code di vs code up to date terhadap github web
