@@ -32,6 +32,9 @@
   - Buat repo baru di github.com
   - git remote add origin https://github.com/ArisDjango/CrudVeryAcReact.git
   - git status
+  - git push --set-upstream origin master
+  - Masukkan username & password github
+  - selesai
 
 ## CLONE
 - buat repo kosong baru di git --> https://github.com/ArisDjango/CrudVeryAcReact.git
