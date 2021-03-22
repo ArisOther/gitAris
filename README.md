@@ -55,6 +55,11 @@
 - git log --oneline    = satu baris simple
 - git log 423ub34    = menampilkan log berdasarkan no.
 
+## ADD
+- melihat head file --> `git rev-parse --short HEAD`  atau `git log --oneline`
+- `git add .` --> add semua, atau `git add <head>` --> add file tertentu
+- `git reset <head>` --> undo add
+- `rm -Force ./.git/index.lock` --> Jika ada masalah conflict 'Another git process'
 
 ## COMMIT
 - git add --all
@@ -63,8 +68,8 @@
 
 
 ## PUSH
-- pastikan config, tambahhkan username/pass jika belum ada
-- pastikan remote punya izin, add/rm remote jika perlu
+- pastikan di bab #config, tambahhkan username/pass jika belum ada
+- pastikan remote punya izin (di bab #remote), add/rm remote jika perlu
 
 - git push origin 
 - sudo git push origin --> untuk by pass agar tidak menggunakan sudo --> sudo chown -R aris:aris /home/aris/tesRepo/Spoon-Knife/.git
