@@ -11,12 +11,14 @@
 ## GIT CONFIG
 - git --version
 - git config --list
+- git config --get remote.origin.url
 - git config --global user.name "namamu" 
 - git config --global user.email "winandiaris@gmail.com"
 - git config --global user.password "your password"
 
 ## REMOTE
 - git remote -v --> remote list
+- git config --get remote.origin.url --> cek remote yang aktif
 - git remote add origin https://github.com/winandiOrg/winandiPy2.git
 - git remote set-url origin git@github.com:winandiaris/winandiPy.git
 - git remote rm origin --> menghapus remote ang lama dulu jika diperlukan
@@ -36,12 +38,19 @@
   - Masukkan username & password github
   - selesai
 
-## CLONE
+## CLONE (repo pribadi)
 - buat repo kosong baru di git --> https://github.com/ArisDjango/CrudVeryAcReact.git
 - cd directory_lokal
 - git clone https://github.com/ArisDjango/CrudVeryAcReact.git
 - Buat perubahan
 - git add . --> git commit -m "sds" --> git push origin
+
+## CLONE (repo orang lain, variasi Fork)
+- cd directory
+- git clone https://github.com/orang_lain.git
+- git config --get remote.origin.url --> melihat remote yang aktif
+- git remote set-url origin git@github.com:winandiaris/winandiPy.git --> set menjadi remote kita
+- add/commit/push
 
 ## FORK
 - Fork repo yang diinginkan --> https://github.com/octocat/Spoon-Knife
