@@ -66,7 +66,9 @@
 
 ## ADD
 - melihat head file --> `git rev-parse --short HEAD`  atau `git log --oneline`
-- `git add .` --> add semua, atau `git add <head>` --> add file tertentu
+- `git add .` --> add semua,
+- `git add <head>` --> add kode head file tertentu
+- git add ../README.md --> add nama file tertentu
 - `git reset <head>` --> undo add
 - `rm -Force ./.git/index.lock` --> Jika ada masalah conflict 'Another git process'
 
