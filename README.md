@@ -48,6 +48,8 @@
 ## CLONE (repo orang lain, variasi Fork)
 - cd directory
 - git clone https://github.com/orang_lain.git
+- git clone -b <branchname> https://github.com/orang_lain.git --> clone repo/all branch dan fetch ke branch tertentu
+- git clone -b <branchname> --single-branch https://github.com/orang_lain.git --> clone dan fetch hanya branch tertentu
 - git config --get remote.origin.url --> melihat remote yang aktif
 - git remote set-url origin git@github.com:winandiaris/winandiPy.git --> set menjadi remote kita
 - add/commit/push
