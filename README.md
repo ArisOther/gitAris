@@ -1,5 +1,5 @@
 # gitAris
-
+## update cara clone menggunakan [token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 ## Pengenalan & Instalasi
 - ======================
 - dokumentasi lengkap ada di https://git-scm.com/book/id/v2
