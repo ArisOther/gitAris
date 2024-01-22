@@ -123,10 +123,63 @@
 - git add --all
  
 
-===============================================
-===============================================
+## ======================= Branching Strategy ========================
+- So at least we have 4 branch during development?
+  - Master
+  - release
+  - development
+  - feature
 
+- 'feature' merged to 'development', then 'development' merged to 'release', then at least 'release' merged to 'Master' ? something like that ?
+-------------------
 
+- "Gitflow Workflow." Here's a breakdown of the branches you mentioned and their typical flow in this workflow:
+- Master:
+  - Represents the stable and production-ready code. Code from release branches is merged into master when a new version is ready for deployment.
+- Release:
+  - Created from the develop branch when preparing for a release. The release branch allows for final testing, bug fixing, and making any necessary adjustments before merging into both master and develop.
+- Develop:
+  - The main branch for ongoing development. Feature branches are created from develop, and completed features are merged back into develop. It serves as a staging area for new features before they are released.
+- Feature:
+  - Feature branches are created from develop and used for developing new features. Once a feature is complete, it is merged back into develop. These branches are short-lived and focused on specific tasks.
+
+- The typical flow in the Gitflow Workflow is as follows:
+  - Feature Development:
+    - Create a new feature branch from develop.
+    - Implement and test the feature on the feature branch.
+    - Once the feature is complete, merge it back into develop.
+  - Release Preparation:
+    - Create a release branch from develop.
+    - Perform final testing, bug fixing, and any necessary adjustments on the release branch.
+    - Once the release is ready, merge the release branch into both master and develop.
+  - Hotfix (if needed):
+    - If critical issues arise in the production code (on master), create a hotfix branch from master.
+    - Fix the issue on the hotfix branch.
+    - Merge the hotfix branch back into both master and develop.
+- This branching strategy helps in organizing the development process, ensuring stability in production, and allowing for parallel development of features. However, it's important to note that the choice of branching strategy can vary based on team preferences, project requirements, and the development workflow in use.
+
+## ----------- Merge Use case --------------
+- Certainly! If you want to merge the changes from the 'release' branch into the 'master' branch, here's a step-by-step example:
+
+  - Switch to the 'master' branch:
+    - git checkout master
+  - Ensure 'master' is up-to-date:
+    - git pull origin master
+  - Merge 'release' into 'master':
+    - git merge release
+    - If there are no conflicts, Git will perform the merge automatically. If there are conflicts, you'll need to resolve them manually before completing the merge.
+  - Conflict Case
+    - Resolve Conflicts (if any):
+    - If conflicts occur during the merge, Git will pause the process and highlight the conflicting files. Open those files, resolve the conflicts, and then continue the merge.
+    - After resolving conflicts, mark the files as resolved
+    - git add .
+- Continue with the merge
+  - git merge --continue
+- Commit the Merge:
+  - If there were no conflicts or once you've resolved them, commit the merge.
+  - git commit -m "Merge 'release' into 'master'"
+- Push the Changes to Remote Repository:
+  - git push origin master
 
 ## other
 Commit
