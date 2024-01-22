@@ -100,7 +100,14 @@
 
 ## STASH
 - `git stash`
-- case: posisi aktif di branch 'master' dan update code, jika ingin pindah ke branch 'dev', di stash dulu agar perubahan code di 'master' tidak tampak di 'dev'
+- `git stash list`
+- `git stash apply` or `git stash apply stash@{n}` --> by index list of stash
+- `git stash drop` --> setelah branch update dan tidak membutuhkan stash
+- case ingin switch branch dari 'dev' ke 'master'. pilihannya ada 2, di commit, atau di stash. karena bab stash, berikut untuk use case stash:
+  - posisi aktif di branch 'dev' dan ada update code,
+  - Ingin pindah ke branch 'master'. sebelum checkout, di stash dulu agar perubahan code di 'dev' tidak tampak di 'master' --> `git stash` --> `git checkout master`
+  - Pindah lagi ke branch 'dev' dna menampilkan stash, `git stash list` --> `git stash apply stash@{0}` , maka update code akan muncul
+  - setelah itu bisa di commit / add jika dibutuhkan
 
 ## MERGE
 - Misal branch 'hal-depan' (kondisi sudah terisi content code) ada file baru/perubahan, dan ingin menambahkan file/perubahan itu ke branch 'master'
