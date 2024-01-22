@@ -98,6 +98,10 @@
 - `git checkout master` = pindah ke branch teretentu (master)
 -` git branch -d crazy-experiment` = delete branch
 
+## STASH
+- `git stash`
+- case: posisi aktif di branch 'master' dan update code, jika ingin pindah ke branch 'dev', di stash dulu agar perubahan code di 'master' tidak tampak di 'dev'
+
 ## MERGE
 - Misal branch 'hal-depan' (kondisi sudah terisi content code) ada file baru/perubahan, dan ingin menambahkan file/perubahan itu ke branch 'master'
   - `git checkout master`
