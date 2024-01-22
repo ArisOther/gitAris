@@ -75,38 +75,38 @@
 - `rm -Force ./.git/index.lock` --> Jika ada masalah conflict 'Another git process'
 
 ## COMMIT
-- git add --all
-- git status = melihat daftar file yang siap di commit
-- git commit -m "ini adalah file html" 
+- `git add --all`
+- `git status` = melihat daftar file yang siap di commit
+- `git commit -m "ini adalah file html" `
 
 
 ## PUSH
 - pastikan di bab #config, tambahhkan username/pass jika belum ada
 - pastikan remote punya izin (di bab #remote), add/rm remote jika perlu
 
-- git push origin 
-- sudo git push origin --> untuk by pass agar tidak menggunakan sudo --> sudo chown -R aris:aris /home/aris/tesRepo/Spoon-Knife/.git
+- `git push origin `
+- sudo git push origin --> untuk by pass agar tidak menggunakan sudo --> `sudo chown -R aris:aris /home/aris/tesRepo/Spoon-Knife/.git`
   - saat melakukan push, branch yang aktif = 'main'.
   - biasanya diminta branch agar bisa push--> perintah dibawah ini akan otomatis membuat branch baru = 'master'
-    - git push --set-upstream origin master
+    - `git push --set-upstream origin master`
   - di github, perubahan masuk di branch master, dan bisa dirubah manjadi branch default.
 - jika menginginkan perubahan terdapat juga di branch lain, gunakan merge
 
 ## BRANCH
-- git branch = list branch
-- git branch nama_branch = membuat branch baru
-- git checkout master = pindah ke branch teretentu (master)
-- git branch -d crazy-experiment = delete branch
+- `git branch` = list branch
+- `git branch nama_branch` = membuat branch baru
+- `git checkout master` = pindah ke branch teretentu (master)
+-` git branch -d crazy-experiment` = delete branch
 
 ## MERGE
 - Misal branch 'hal-depan' (kondisi sudah terisi content code) ada file baru/perubahan, dan ingin menambahkan file/perubahan itu ke branch 'master'
-  - git checkout master
-  - git merge hal_depan
+  - `git checkout master`
+  - `git merge hal_depan`
 
 - Misal BUAT branch baru 'hal_depan' (kondisi kosong) dan ingin mengisi branch tsb dengan 'master' (terdapat content utama):
   - di vscode, kondisi ada di  branch 'master' beserta kode2yna sedang aktif ,  
-  - git branch hal_depan
-  - git checkout hal_depan
+  - `git branch hal_depan`
+  - `git checkout hal_depan`
   - buat perubahan pada kode
   - git add/commit/push
 
@@ -114,13 +114,13 @@
 
 ## PULL
 - misal menginginkan code di vs code up to date terhadap github web
-  - git checkout master
-  - git pull
+  - `git checkout master`
+  - `git pull`
  
-- git init ------------> membuat git pada folder tertentu.
-- git status
-- git add index.html -----------> menambahkan/Track file dalam git 
-- git add --all
+- `git init` ------------> membuat git pada folder tertentu.
+- `git status`
+- `git add index.html` -----------> menambahkan/Track file dalam git 
+- `git add --all`
  
 
 ## ======================= Branching Strategy ========================
@@ -162,31 +162,31 @@
 - Certainly! If you want to merge the changes from the 'release' branch into the 'master' branch, here's a step-by-step example:
 
   - Switch to the 'master' branch:
-    - git checkout master
+    - `git checkout master`
   - Ensure 'master' is up-to-date:
-    - git pull origin master
+    - `git pull origin master`
   - Merge 'release' into 'master':
-    - git merge release
+    - `git merge release`
     - If there are no conflicts, Git will perform the merge automatically. If there are conflicts, you'll need to resolve them manually before completing the merge.
   - Conflict Case
     - Resolve Conflicts (if any):
     - If conflicts occur during the merge, Git will pause the process and highlight the conflicting files. Open those files, resolve the conflicts, and then continue the merge.
     - After resolving conflicts, mark the files as resolved
-    - git add .
+    - `git add .`
 - Continue with the merge
-  - git merge --continue
+  - `git merge --continue`
 - Commit the Merge:
   - If there were no conflicts or once you've resolved them, commit the merge.
-  - git commit -m "Merge 'release' into 'master'"
+  - `git commit -m "Merge 'release' into 'master'"`
 - Push the Changes to Remote Repository:
-  - git push origin master
+  - `git push origin master`
 
 ## other
 Commit
 =========================
 Setelah melakukan perubahan pada kode di dir lokal
-- git diff ----------> see perubahan  file
-- git add index.html
+- `git diff` ----------> see perubahan  file
+- `git add index.html`
 - git commit -m "ini adalah file html"  
  
 
